@@ -78,7 +78,14 @@ const template = html`
 </dom-module>
 `;
 template.setAttribute('style', 'display: none;');
-setTimeout(function(){document.body.appendChild(template.content);}, 0);
+var appendToBody = setInterval(function(){
+
+    if (document.body) {
+      document.body.appendChild(template$7.content);
+      clearInterval(appendToBody);
+    }
+
+  }, 50);
 
 /**
 Material design: [Icon
