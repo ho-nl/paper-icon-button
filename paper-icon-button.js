@@ -78,7 +78,7 @@ const template = html`
 </dom-module>
 `;
 template.setAttribute('style', 'display: none;');
-document.body.appendChild(template.content);
+setTimeout(function(){document.body.appendChild(template.content);}, 0);
 
 /**
 Material design: [Icon
