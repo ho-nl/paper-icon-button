@@ -81,7 +81,7 @@ template.setAttribute('style', 'display: none;');
 var appendToBody = setInterval(function(){
 
     if (document.body) {
-      document.body.appendChild(template$7.content);
+      document.body.appendChild(template.content);
       clearInterval(appendToBody);
     }
 
