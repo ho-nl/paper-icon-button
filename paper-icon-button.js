@@ -15,6 +15,8 @@ import '@polymer/paper-styles/default-theme.js';
 import {PaperInkyFocusBehavior} from '@polymer/paper-behaviors/paper-inky-focus-behavior.js';
 import {Polymer} from '@polymer/polymer/lib/legacy/polymer-fn.js';
 import {html} from '@polymer/polymer/lib/utils/html-tag.js';
+import {beforeNextRender} from '@polymer/polymer/lib/utils/render-status';
+
 
 const template = html`
 <dom-module id="paper-icon-button">
@@ -78,11 +80,13 @@ const template = html`
 </dom-module>
 `;
 template.setAttribute('style', 'display: none;');
-if (document.body) {
+if(document.body) {
   document.body.appendChild(template.content);
 } else {
-  document.addEventListener("DOMContentLoaded", function(event) {
-    document.body.appendChild(template.content);
+  beforeNextRender(this, () => {
+    if(document.body) {
+      document.body.appendChild(template.content);
+    }
   });
 }
 
@@ -104,7 +108,7 @@ how to use a custom icon set.
 
 Example:
 
-    <script type="module">
+    <script type="module">paper-tab
       import '@polymer/iron-icons/iron-icons.js';
     </script>
 
