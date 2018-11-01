@@ -78,14 +78,13 @@ const template = html`
 </dom-module>
 `;
 template.setAttribute('style', 'display: none;');
-var appendToBody = setInterval(function(){
-
-    if (document.body) {
-      document.body.appendChild(template.content);
-      clearInterval(appendToBody);
-    }
-
-  }, 50);
+if (document.body) {
+  document.body.appendChild(template.content);
+} else {
+  document.addEventListener("DOMContentLoaded", function(event) {
+    document.body.appendChild(template.content);
+  });
+}
 
 /**
 Material design: [Icon
