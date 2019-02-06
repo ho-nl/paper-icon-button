@@ -1,4 +1,4 @@
-##Deprecated##
+## Deprecated
 Use the official paper-icon-button#^3.0.2 where the appendHead function is removed and thus causes no issues anymore.
 
 [![Published on NPM](https://img.shields.io/npm/v/@polymer/paper-icon-button.svg)](https://www.npmjs.com/package/@polymer/paper-icon-button)
