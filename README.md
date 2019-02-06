@@ -1,3 +1,6 @@
+##Deprecated##
+Use the official paper-icon-button#^3.0.2 where the appendHead function is removed and thus causes no issues anymore.
+
 [![Published on NPM](https://img.shields.io/npm/v/@polymer/paper-icon-button.svg)](https://www.npmjs.com/package/@polymer/paper-icon-button)
 [![Build status](https://travis-ci.org/PolymerElements/paper-icon-button.svg?branch=master)](https://travis-ci.org/PolymerElements/paper-icon-button)
 [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://webcomponents.org/element/@polymer/paper-icon-button)
